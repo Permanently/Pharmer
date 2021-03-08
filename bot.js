@@ -87,10 +87,10 @@ mc.on('message', (message) => {
     }
 
     if (config.extras.hypixelAutoGG && (message.includes("Your game was boosted by") || message.includes("1st Place - "))) {
-        mc.chat("/ac gg")
         setTimeout(() => {
-            mc.chat("/tip all")
+            mc.chat("/ac gg")
         }, 5000);
+        mc.chat("/tip all")
     }
 
     if (!silence && message.replace(/\s/g, '').length) {
