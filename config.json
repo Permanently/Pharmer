@@ -35,7 +35,10 @@
                 "was chopped into a million pieces",
                 "has finished the parkour",
                 "has completed the items needed to craft",
-                "fell into the void"
+                "fell into the void",
+                "You will be able to move in",
+                "was murdered by a spider",
+                "has finished the maze"
             ]
         }
     },
