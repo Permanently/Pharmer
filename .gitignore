@@ -1,3 +1,6 @@
+# Sensitive data is stored in this file (obviously)
+config.json
+
 # Logs
 logs
 *.log
