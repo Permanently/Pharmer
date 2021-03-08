@@ -53,10 +53,7 @@ discord.on('message', message => {
 })
 
 mc.on('login', () => {
-    // setTimeout(() => {
-    //     log("Logged in, sending to limbo.");
-    //     mc.chat("/achat \u00a7c<3");
-    // }, 1000);
+    log("Logged into Minecraft.");
     inGame = false;
 })
 
