@@ -86,12 +86,17 @@ mc.on('message', (message) => {
         }, 60000);
     }
 
+    if (config.extras.hypixelAutoGG && (message.includes("Your game was boosted by") || message.includes("1st Place - "))) {
+        mc.chat("/ac gg")
+        setTimeout(() => {
+            mc.chat("/tip all")
+        }, 5000);
+    }
+
     if (!silence && message.replace(/\s/g, '').length) {
         log(message, true)
 
-        if (config.extras.hypixelAutoGG && (message.includes("Your game was boosted by") || message.includes("1st Place - "))) {
-            mc.chat("/ac gg")
-        } else if (message.includes("The game starts") || message.includes("The game is starting in ")) {
+        if (message.includes("The game starts") || message.includes("The game is starting in ")) {
             inGame = true;
         } else if (message.includes("     Looks like no one won. :(")) {
             log("Detected broken or empty game. Sending play command.");
