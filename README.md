@@ -18,10 +18,10 @@ Pharmer is a lightweight NodeJS client based on [Mineflayer](https://mineflayer.
 ### Discord Setup Instructions
 - Create a Discord app from the [Developer Portal](https://discord.com/developers/applications).
 - Add a Bot under the bots tab.
-- Take note of your **Client ID** (in the General Information tab) and your **Token** (under the Bot tab).
+- Take note of your **token** (under the Bot tab).
 - Go to the following link, replacing `123YourClientID456` with your client ID: `https://discord.com/oauth2/authorize?scope=bot&client_id=123YourClientID456`
 - Select the Discord server to add your bot to.
-- Add your Client ID and Token to the respective fields in [config.json](https://github.com/Permanently/Pharmer/blob/main/config.json).
+- Add your token and channel ID rto the respective fields in [config.json](https://github.com/Permanently/Pharmer/blob/main/config.json).
   - You can `Right Click > Copy ID` if you turn on Developer Mode in Discord settings!
 
 ## config.json walkthrough
