@@ -1,0 +1,23 @@
+{
+  "name": "pharmer",
+  "version": "1.0.0",
+  "description": "An client for Minecraft, designed to benefit the user whilst being AFK.",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Permanently/Pharmer.git"
+  },
+  "author": "Permanently",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Permanently/Pharmer/issues"
+  },
+  "homepage": "https://github.com/Permanently/Pharmer#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "mineflayer": "^3.2.0"
+  }
+}
