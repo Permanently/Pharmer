@@ -79,6 +79,16 @@ mc.on('message', (message) => {
         mc.chat("/achat \u00a7c<3");
     }
 
+    if (message.includes("Something went wrong trying to send you to that server! If this keeps happening please report it!")) {
+        log("Sending to game failed, sending to limbo. Will try re-joining in one minute.")
+        limboCmd = true;
+        mc.chat("/achat \u00a7c<3");
+        setTimeout(() => {
+            log("Sending to Party Games.");
+            mc.chat("/play arcade_party_games_1");
+        }, 60000);
+    }
+
     if (!silence && message.replace(/\s/g, '').length) {
         log(message, true)
 
