@@ -89,7 +89,7 @@ mc.on('message', (message) => {
         } else if (message.includes("     Looks like no one won. :(")) {
             log("Detected broken or empty game. Sending play command.");
             mc.chat("/play arcade_party_games_1");
-        } else if ((message.endsWith(" joined the lobby!") && message.includes("[MVP+") && !message.includes(username)) || message.includes("You are currently NICKED")) {
+        } else if ((message.includes(" joined the lobby!") && message.includes("[MVP+")) || message.includes("You are currently NICKED")) {
             inGame = false;
             if (config.extras.hypixelAutoMatch) {
                 log("Detected to be in lobby, sending to game.");
