@@ -12,14 +12,19 @@
             "address": "catma.id.hypixel.net",
             "port": 25565,
             "version": "1.8.9",
-            "silenceMsgs": ["The game starts in", 
+            "silenceMsgs": [
+                "The game starts in", 
                 "has joined (", 
-                "▬▬▬▬▬▬▬", 
+                "▬▬▬", 
+                "---", 
                 "coins for this game! Gain XP and coins by", 
-                "The next game will begin in 10s", 
+                "The next game will begin in", 
                 "The game is starting in", 
                 "You have 0 x", 
-                "died an honorable death!"]
+                "The ship fleet begins to fire faster", 
+                "was blown up by", 
+                "died an honorable death!"
+            ]
         }
     },
 
