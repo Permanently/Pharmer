@@ -34,12 +34,8 @@ discord.on('ready', () => {
 })
 
 discord.on('message', message => {
-    if (message.channel.id !== channel.id) {
-        return
-    }
-    if (message.author.id === discord.user.id) {
-        return
-    }
+    if (message.channel.id !== channel.id) return;
+    if (message.author.id === discord.user.id) return;
 
     if (message.content == "!limbo") {
         log("Sending to limbo.");
@@ -52,9 +48,7 @@ discord.on('message', message => {
         log("Going offline.");
         mc.quit();
         process.exit(0);
-    } else {
-        mc.chat(message.toString());
-    }
+    } else mc.chat(message.toString());
 
 })
 
@@ -75,16 +69,11 @@ mc.on('message', (message) => {
     message = message.toString();
 
     config.minecraft.server.silenceMsgs.forEach(entry => {
-        if (message.includes(entry)) {
-            return;
-        }
+        if (message.includes(entry)) return;
     })
 
-    if (message.includes("you have been routed to limbo")) {
-        limboCmd = false;
-    } else if (limboCmd) {
-        mc.chat("/achat \u00a7c<3");
-    }
+    if (message.includes("you have been routed to limbo")) limboCmd = false;
+    else if (limboCmd) mc.chat("/achat \u00a7c<3");
 
     if (message.replace(/\s/g, '').length) {
         log(message, true)
@@ -109,4 +98,4 @@ mc.on('message', (message) => {
     }
 })
 
-discord.login(config.discord.botToken)
+discord.login(config.discord.botToken);
