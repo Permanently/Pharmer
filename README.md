@@ -1,6 +1,8 @@
 # Pharmer
 Pharmer is a lightweight NodeJS client based on [Mineflayer](https://mineflayer.prismarine.js.org/) that's ideal for AFK'ing games, farms, or pretty much anything you want. The bot can link into Discord as well, giving you easy access to view your Minecraft chat. Currently, the client is built around Party Games on an unmentioned Minecraft server, in order to farm Guild EXP. Customisability may be extended in the near future.
 
+**Fun fact:** I named this Pharmer because I had this clever idea of combining two things into a word, but I completely forgot what I was thinking - so now this is called Pharmer, and I'm not too sure why anymore.
+
 ## Requirements
 - Node v14 (still need v10 or v12? [nvm](https://github.com/Neilpang/nvm) might be perfect for you!)
 - A Discord bot
