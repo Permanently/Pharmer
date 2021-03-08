@@ -18,6 +18,7 @@
                 "▬▬▬", 
                 "---", 
                 "coins for this game! Gain XP and coins by", 
+                "Buy Network Boosters at", 
                 "The next game will begin in", 
                 "The game is starting in", 
                 "x ✮", 
@@ -30,7 +31,10 @@
                 "thrown into the void",
                 "has reached the",
                 "has charred to a well-done",
-                "was chopped into a million pieces"
+                "was chopped into a million pieces",
+                "has finished the parkour",
+                "has completed the items needed to craft",
+                "fell into the void"
             ]
         }
     },
