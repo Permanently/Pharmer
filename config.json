@@ -20,10 +20,17 @@
                 "coins for this game! Gain XP and coins by", 
                 "The next game will begin in", 
                 "The game is starting in", 
-                "You have 0 x", 
+                "x ✮", 
+                "✮)", 
                 "The ship fleet begins to fire faster", 
                 "was blown up by", 
-                "died an honorable death!"
+                "died an honorable death!",
+                "Your score is ",
+                "YOU ARE ",
+                "thrown into the void",
+                "has reached the",
+                "has charred to a well-done",
+                "was chopped into a million pieces"
             ]
         }
     },
