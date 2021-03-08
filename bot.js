@@ -62,7 +62,7 @@ mc.on('login', () => {
 
 mc.on('kicked', (reason, loggedIn) => log("**Kicked from game:** " + reason + loggedIn, false))
 
-mc.on('error', err => console.log(err))
+mc.on('error', err => {console.log(err); process.exit(1);})
 
 mc.on('message', (message) => {
     message = message.toString();
