@@ -67,15 +67,20 @@ mc.on('error', err => console.log(err))
 
 mc.on('message', (message) => {
     message = message.toString();
+    silence = false;
 
     config.minecraft.server.silenceMsgs.forEach(entry => {
-        if (message.includes(entry)) return;
+        if (message.includes(entry)) silence = true;
+        return;
     })
 
     if (message.includes("you have been routed to limbo")) limboCmd = false;
-    else if (limboCmd) mc.chat("/achat \u00a7c<3");
+    else if (limboCmd) {
+        silence = true;
+        mc.chat("/achat \u00a7c<3");
+    }
 
-    if (message.replace(/\s/g, '').length) {
+    if (!silence && message.replace(/\s/g, '').length) {
         log(message, true)
 
         if (config.extras.hypixelAutoGG && (message.includes("Your game was boosted by") || message.includes("1st Place - "))) {
