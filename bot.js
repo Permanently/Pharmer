@@ -57,7 +57,6 @@ mc.on('login', () => {
     //     log("Logged in, sending to limbo.");
     //     mc.chat("/achat \u00a7c<3");
     // }, 1000);
-    username = mc._client.session.selectedProfile.name;
     inGame = false;
 })
 
