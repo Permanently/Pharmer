@@ -1,6 +1,5 @@
 const Mineflayer = require('mineflayer');
 const DiscordJS = require('discord.js');
-const viewer = require('prismarine-viewer').headless;
 const config = require('./config.json');
 const discord = new DiscordJS.Client();
 const mc = Mineflayer.createBot({

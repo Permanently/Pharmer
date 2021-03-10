@@ -19,7 +19,6 @@
   "homepage": "https://github.com/Permanently/Pharmer#readme",
   "dependencies": {
     "discord.js": "^12.5.1",
-    "mineflayer": "^3.2.0",
-    "prismarine-viewer": "^1.17.0"
+    "mineflayer": "^3.2.0"
   }
 }
