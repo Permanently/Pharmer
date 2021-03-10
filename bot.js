@@ -96,8 +96,9 @@ mc.on('message', (message) => {
     if (config.extras.hypixelAutoGG && (message.includes("Your game was boosted by") || message.includes("1st Place - "))) {
         setTimeout(() => {
             mc.chat("/ac gg")
-        }, 5000);
+        setTimeout(() => {
         mc.chat("/tip all")
+        }, 5000);
     }
 
     if (!silence && message.replace(/\s/g, '').length) {
