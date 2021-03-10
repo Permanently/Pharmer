@@ -58,7 +58,7 @@ mc.on('login', () => {
     inGame = false;
 })
 
-mc.on('kicked', (reason, loggedIn) => log("**Kicked from game:** " + reason + loggedIn, false))
+mc.on('kicked', (reason, loggedIn) => {log("**Kicked from game:** " + reason + loggedIn, false); process.exit(1);});
 
 mc.on('error', err => {console.log(err); process.exit(1);})
 
