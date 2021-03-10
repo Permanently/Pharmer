@@ -36,8 +36,9 @@ Name|Description|Type
 `minecraft.server.port` | Enter the port of the Minecraft server address you want the bot to connect to. | integer
 `minecraft.server.version` | Enter the version you want the bot to connect with. | string
 `minecraft.server.silenceMsgs` | Enter the messages you don't want to send to Discord. This means the Discord bot will be more up-to-date with messages as it will not be rate-limited. | array
-`extras.hypixelAutoGG` | Whether you want the bot to say "gg" at the end of the game. | boolean
-`extras.hypixelAutoMatch` | Whether you want the bot to automatically enter a game whenever the bot starts. | boolean
+`extras.hypixelAutoGG.enabled` | Whether you want the bot to say "gg" at the end of the game. | boolean
+`extras.hypixelAutoGG.interval` | How long you want the bot to wait before saying "gg". | integer
+`extras.hypixelAutoMatch.enabled` | Whether you want the bot to automatically enter a game whenever the bot starts. | boolean
 
 ## Discord Commands
 Name|Description
