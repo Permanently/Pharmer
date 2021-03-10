@@ -93,11 +93,13 @@ mc.on('message', (message) => {
         }, 60000);
     }
 
-    if (config.extras.hypixelAutoGG && (message.includes("Your game was boosted by") || message.includes("1st Place - "))) {
+    if (config.extras.hypixelAutoGG.enabled && (message.includes("Your game was boosted by") || message.includes("1st Place - "))) {
         setTimeout(() => {
             mc.chat("/ac gg")
+        }, config.extras.hypixelAutoGG.interval);
+
         setTimeout(() => {
-        mc.chat("/tip all")
+            mc.chat("/tip all")
         }, 5000);
     }
 
