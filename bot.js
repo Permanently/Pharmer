@@ -113,7 +113,7 @@ mc.on('message', (message) => {
             mc.chat("/play arcade_party_games_1");
         } else if ((message.includes(" joined the lobby!") && message.includes("[MVP+")) || message.includes("You are currently NICKED")) {
             inGame = false;
-            if (config.extras.hypixelAutoMatch) {
+            if (config.extras.hypixelAutoMatch.enabled) {
                 log("Detected to be in lobby, sending to game.");
                 mc.chat("/play arcade_party_games_1");
             } else {
