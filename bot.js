@@ -20,7 +20,7 @@ function log(message, discord) {
         channel.send(message);
         console.log(message);
     }
-}
+};
 
 limboCmd = false;
 
@@ -32,7 +32,7 @@ discord.on('ready', () => {
         process.exit(1);
     }
 
-})
+});
 
 discord.on('message', message => {
     if (message.channel.id !== channel.id) return;
@@ -51,16 +51,22 @@ discord.on('message', message => {
         process.exit(0);
     } else mc.chat(message.toString());
 
-})
+});
 
 mc.on('login', () => {
     log("Logged into Minecraft.");
     inGame = false;
-})
+});
 
-mc.on('kicked', (reason, loggedIn) => {log("**Kicked from game:** " + reason + loggedIn, false); process.exit(1);});
+mc.on('kicked', (reason, loggedIn) => {
+    log("**Kicked from game:** " + reason + loggedIn, false);
+    process.exit(1);
+});
 
-mc.on('error', err => {console.log(err); process.exit(1);})
+mc.on('error', err => {
+    console.log(err);
+    process.exit(1);
+});
 
 mc.on('message', (message) => {
     message = message.toString();
@@ -113,6 +119,6 @@ mc.on('message', (message) => {
             }
         }
     }
-})
+});
 
 discord.login(config.discord.botToken);
