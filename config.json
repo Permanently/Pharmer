@@ -50,6 +50,8 @@
             "enabled": true,
             "interval": 1000
         },
-        "hypixelAutoMatch": true
+        "hypixelAutoMatch": {
+            "enabled": true
+        }
     }
 }
