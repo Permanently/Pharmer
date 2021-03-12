@@ -63,6 +63,11 @@ mc.on('kicked', (reason, loggedIn) => {
     process.exit(1);
 });
 
+mc.on('end', () => {
+    log("**Disconnected for unknown reason.**");
+    process.exit(0);
+});
+
 mc.on('error', err => {
     console.log(err);
     channel.send("Error occurred - check console for more info.\n```\n" + message + "\n```");
