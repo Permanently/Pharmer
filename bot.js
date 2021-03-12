@@ -60,7 +60,7 @@ mc.on('login', () => {
 
 mc.on('kicked', (reason, loggedIn) => {
     log("**Kicked from game:** " + reason + loggedIn, false);
-    process.exit(1);
+    process.exit(0);
 });
 
 mc.on('end', () => {
