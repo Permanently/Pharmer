@@ -65,6 +65,7 @@ mc.on('kicked', (reason, loggedIn) => {
 
 mc.on('error', err => {
     console.log(err);
+    channel.send("Error occurred - check console for more info.\n```\n" + message + "\n```");
     process.exit(1);
 });
 
