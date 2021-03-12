@@ -10,6 +10,7 @@ const mc = Mineflayer.createBot({
     version: config.minecraft.server.version,
     auth: config.minecraft.authType
 });
+mc.settings.viewDistance = "tiny";
 
 function log(message, discord) {
     if (discord) {
