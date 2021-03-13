@@ -1,0 +1,25 @@
+{
+  "discord": {
+    "botToken": "your discord bot token",
+    "channelID": "the designated discord channel's id"
+  },
+  "minecraft": {
+    "username": "minecraft username or email",
+    "password": "minecraft password",
+    "authType": "mojang",
+    "server": {
+      "address": "catma.id.hypixel.net",
+      "port": 25565,
+      "version": "1.8.9"
+    }
+  },
+  "extras": {
+    "hypixelAutoGG": {
+      "enabled": true,
+      "interval": 1000
+    },
+    "hypixelAutoMatch": {
+      "enabled": true
+    }
+  }
+}
