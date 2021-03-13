@@ -11,7 +11,7 @@ Pharmer is a lightweight NodeJS client based on [Mineflayer](https://mineflayer.
 ## Bot Setup Instructions
 - Download this project (or alternatively, `git clone` the repository)
 - Run `npm install`
-- Fill in `config.json` with the necessary details
+- Fill in `config/config.json` with the necessary details
 - Run `node .` or `npm start`, and leave the bot running!
   - If you decide to run the bot on a Linux machine, I recommend using [forever](https://www.npmjs.com/package/forever).
 
@@ -21,7 +21,7 @@ Pharmer is a lightweight NodeJS client based on [Mineflayer](https://mineflayer.
 - Take note of your **token** (under the Bot tab).
 - Go to the following link, replacing `123YourClientID456` with your client ID: `https://discord.com/oauth2/authorize?scope=bot&client_id=123YourClientID456`
 - Select the Discord server to add your bot to.
-- Add your token and channel ID rto the respective fields in [config.json](https://github.com/Permanently/Pharmer/blob/main/config.json).
+- Add your token and channel ID rto the respective fields in [config/config.json](https://github.com/Permanently/Pharmer/blob/main/config/config.json).
   - You can `Right Click > Copy ID` if you turn on Developer Mode in Discord settings!
 
 ## config.json walkthrough
@@ -35,10 +35,14 @@ Name|Description|Type
 `minecraft.server.address` | Enter the Minecraft server address you want the bot to connect to. | string
 `minecraft.server.port` | Enter the port of the Minecraft server address you want the bot to connect to. | integer
 `minecraft.server.version` | Enter the version you want the bot to connect with. | string
-`minecraft.server.silenceMsgs` | Enter the messages you don't want to send to Discord. This means the Discord bot will be more up-to-date with messages as it will not be rate-limited. | array
 `extras.hypixelAutoGG.enabled` | Whether you want the bot to say "gg" at the end of the game. | boolean
 `extras.hypixelAutoGG.interval` | How long you want the bot to wait before saying "gg". | integer
 `extras.hypixelAutoMatch.enabled` | Whether you want the bot to automatically enter a game whenever the bot starts. | boolean
+
+### silenced-msgs.json
+Name|Description|Type
+--|--|--
+`silenced-messages` | Enter the messages you don't want to send to Discord. This means the Discord bot will be more up-to-date with messages as it will not be rate-limited. | array
 
 ## Discord Commands
 Name|Description
