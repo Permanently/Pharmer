@@ -14,6 +14,7 @@
         "The ship fleet begins to fire faster", 
         "was blown up by", 
         "died an honorable death!",
+        "fell off the platform and drowned in the water",
         "Your score is ",
         "YOU ARE ",
         "thrown into the void",
@@ -27,6 +28,8 @@
         "was murdered by a spider",
         "has finished the maze",
         "! Find cover!",
-        "but then they took a snowball to the head"
+        "but then they took a snowball to the head",
+        "has captured a Super Bacon",
+        "has finished!"
     ]
 }
