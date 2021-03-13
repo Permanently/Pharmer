@@ -24,6 +24,15 @@ Pharmer is a lightweight NodeJS client based on [Mineflayer](https://mineflayer.
 - Add your token and channel ID rto the respective fields in [config/config.json](https://github.com/Permanently/Pharmer/blob/main/config/config.json).
   - You can `Right Click > Copy ID` if you turn on Developer Mode in Discord settings!
 
+### How to Update
+Want to add new features without going through the hassle of entering in all of your customisations again? No problem! Just enter these in your CLI:
+```
+git stash
+git pull
+git stash pop
+```
+That's it!
+
 ## config.json walkthrough
 Name|Description|Type
 --|--|--
