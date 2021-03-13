@@ -1,6 +1,7 @@
 const Mineflayer = require('mineflayer');
 const DiscordJS = require('discord.js');
-const config = require('./config.json');
+const config = require('./config/config.json');
+const silencedMsgs = require('./config/silenced-msgs.json')['silenced-messages'];
 const discord = new DiscordJS.Client();
 const mc = Mineflayer.createBot({
     host: config.minecraft.server.address,
@@ -78,7 +79,7 @@ mc.on('message', (message) => {
     message = message.toString();
     silence = false;
 
-    config.minecraft.server.silenceMsgs.forEach(entry => {
+    silencedMsgs.forEach(entry => {
         if (message.includes(entry)) silence = true;
         return;
     })
