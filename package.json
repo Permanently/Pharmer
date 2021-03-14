@@ -20,6 +20,7 @@
   "dependencies": {
     "discord.js-light": "^3.5.4",
     "mineflayer": "^3.3.1",
+    "node-canvas-webgl": "^0.2.6",
     "prismarine-viewer": "^1.18.0"
   }
 }
