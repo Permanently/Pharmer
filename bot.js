@@ -1,5 +1,6 @@
 const Mineflayer = require("mineflayer");
 const DiscordJS = require("discord.js-light");
+const viewer = require("prismarine-viewer").headless;
 const config = require("./config/config.json");
 const ignoredEvents = require("./djs.ignoredEvents.js");
 const silencedMsgs = require("./config/silenced-msgs.json")[
@@ -56,6 +57,9 @@ discord.on("message", (message) => {
   } else if (message.content == "!play") {
     log("Sending to Party Games.");
     mc.chat("/play arcade_party_games_1");
+  } else if (message.content == "!view") {
+    log("Producing screenshot...");
+    viewer(mc, { output: 'pov.png', frames: 1, width: 1920, height: 1080 });
   } else if (message.content == "!quit") {
     log("Going offline.");
     mc.quit();
