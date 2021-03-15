@@ -26,6 +26,7 @@ function log(message, discord) {
 }
 
 limboCmd = false;
+lobbyWarping = false;
 
 discord.on("ready", () => {
   console.log(`Logged into Discord as ${discord.user.username}.`);
@@ -121,9 +122,22 @@ mc.on("message", (message) => {
       mc.chat("/ac gg");
     }, config.extras.hypixelAutoGG.interval);
 
+    if (config.extras.hypixelLobbyWarp.enabled) {
+      lobbyWarping = true;
+      if (config.extras.hypixelAutoGG.enabled) {
+        var interval = config.extras.hypixelLobbyWarp.interval.beforeLobby + config.extras.hypixelAutoGG.interval;
+      } else {
+        var interval = config.extras.hypixelLobbyWarp.interval.beforeLobby;
+      }
     setTimeout(() => {
-      mc.chat("/tip all");
-    }, 5000);
+        mc.chat("/lobby");
+      }, interval);
+
+      setTimeout(() => {
+        mc.chat("/play arcade_party_games_1");
+        lobbyWarping = false;
+      }, interval + config.extras.hypixelLobbyWarp.interval.beforeGame);
+    }
   }
 
   if (!silence && message.replace(/\s/g, "").length) {
@@ -146,7 +160,7 @@ mc.on("message", (message) => {
       message.includes("unclaimed leveling rewards!")
     ) {
       inGame = false;
-      if (config.extras.hypixelAutoMatch.enabled) {
+      if (config.extras.hypixelAutoMatch.enabled && !lobbyWarping) {
         log("Detected to be in lobby, sending to game.");
         mc.chat("/play arcade_party_games_1");
       } else {

@@ -20,6 +20,13 @@
     },
     "hypixelAutoMatch": {
       "enabled": true
+    },
+    "hypixelLobbyWarp": {
+      "enabled": true,
+      "interval": {
+        "beforeLobby": 5000,
+        "beforeGame": 5000
+      }
     }
   }
 }
