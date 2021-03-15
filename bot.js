@@ -163,7 +163,8 @@ mc.on("message", (message) => {
       message.includes("unclaimed leveling rewards!")
     ) {
       inGame = false;
-      if (config.extras.hypixelAutoMatch.enabled && !lobbyWarping) {
+      if (!lobbyWarping) {
+        if (config.extras.hypixelAutoMatch.enabled) {
         log("Detected to be in lobby, sending to game.");
         mc.chat("/play arcade_party_games_1");
       } else {
@@ -172,6 +173,7 @@ mc.on("message", (message) => {
       }
     }
   }
+}
 });
 
 discord.login(config.discord.botToken);
