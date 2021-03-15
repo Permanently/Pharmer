@@ -112,8 +112,7 @@ mc.on("message", (message) => {
 
   if (
     config.extras.hypixelAutoGG.enabled &&
-    (message.includes("Your game was boosted by") ||
-      message.includes("1st Place - "))
+    (message.includes("Your game was boosted by"))
   ) {
     setTimeout(() => {
       mc.chat("/ac gg");
