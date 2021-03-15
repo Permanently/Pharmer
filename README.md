@@ -69,6 +69,9 @@ That's it!
 | `extras.hypixelAutoGG.enabled`    | Whether you want the bot to say "gg" at the end of the game.                    | boolean |
 | `extras.hypixelAutoGG.interval`   | How long you want the bot to wait before saying "gg".                           | integer |
 | `extras.hypixelAutoMatch.enabled` | Whether you want the bot to automatically enter a game whenever the bot starts. | boolean |
+| `extras.hypixelLobbyWarp.enabled` | Whether you want the bot to warp to lobby before re-joining a game. Useful if you want to also farm for Mystery Boxes. | boolean |
+| `extras.hypixelLobbyWarp.interval.beforeLobby` | The amount of milliseconds you want to wait after the end of a game. | integer |
+| `extras.hypixelLobbyWarp.interval.beforeGame` | The amount of milliseconds you want to wait before re-joining a game. | integer |
 
 ### silenced-msgs.json
 
