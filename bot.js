@@ -107,6 +107,9 @@ mc.on("message", (message) => {
     setTimeout(() => {
       log("Sending to Party Games.");
       mc.chat("/play arcade_party_games_1");
+      setTimeout(() => {
+        mc.chat("/tip all");
+      }, 5000);
     }, 60000);
   }
 
