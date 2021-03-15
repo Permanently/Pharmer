@@ -130,10 +130,12 @@ mc.on("message", (message) => {
         var interval = config.extras.hypixelLobbyWarp.interval.beforeLobby;
       }
     setTimeout(() => {
+        log("Sending to lobby, in hopes of a Mystery Box.");
         mc.chat("/lobby");
       }, interval);
 
       setTimeout(() => {
+        log("Sending to game.");
         mc.chat("/play arcade_party_games_1");
         lobbyWarping = false;
       }, interval + config.extras.hypixelLobbyWarp.interval.beforeGame);
