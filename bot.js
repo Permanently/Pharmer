@@ -132,6 +132,7 @@ mc.on("message", (message) => {
     setTimeout(() => {
         log("Sending to lobby, in hopes of a Mystery Box.");
         mc.chat("/lobby");
+        lobbyWarping = true
       }, interval);
 
       setTimeout(() => {
