@@ -1,11 +1,12 @@
 const Mineflayer = require("mineflayer");
-const DiscordJS = require("discord.js");
+const DiscordJS = require("discord.js-light");
 const config = require("./config/config.json");
 const silencedMsgs = require("./config/silenced-msgs.json")[
   "silenced-messages"
 ];
 const discord = new DiscordJS.Client();
 const mc = Mineflayer.createBot({
+  cacheChannels: true,
   host: config.minecraft.server.address,
   port: parseInt(config.minecraft.server.port),
   username: config.minecraft.username,
