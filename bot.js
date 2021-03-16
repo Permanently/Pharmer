@@ -101,7 +101,7 @@ mc.on("message", (message) => {
     )
   ) {
     log(
-      "Sending to game failed, sending to limbo. Will try re-joining in one minute."
+      "Sending to game failed; routing to limbo. Will try re-joining in 30 seconds."
     );
     limboCmd = true;
     mc.chat("/achat \u00a7c<3");
@@ -111,7 +111,7 @@ mc.on("message", (message) => {
       setTimeout(() => {
         mc.chat("/tip all");
       }, 5000);
-    }, 60000);
+    }, 30000);
   }
 
   if (
