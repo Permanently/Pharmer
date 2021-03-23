@@ -66,8 +66,19 @@ mc.on("login", () => {
 });
 
 mc.on("kicked", (reason, loggedIn) => {
-  log("**Kicked from game:** " + reason + loggedIn, false);
+  if (!loggedIn) {
+    discord.on("ready", () => {
+      console.log(`Logged into Discord as ${discord.user.username}.`);
+      channel = discord.channels.cache.get(config.discord.channelID);
+      log("**Kicked from game:** " + reason, false)
   process.exit(0);
+      }
+    );
+  }
+  else {
+    log("**Kicked from game:** " + reason, false)
+    process.exit(0);
+  }
 });
 
 mc.on("end", () => {
