@@ -68,10 +68,8 @@ mc.on("login", () => {
 mc.on("kicked", (reason, loggedIn) => {
   if (!loggedIn) {
     discord.on("ready", () => {
-      console.log(`Logged into Discord as ${discord.user.username}.`);
-      channel = discord.channels.cache.get(config.discord.channelID);
       log("**Kicked from game:** " + reason, false)
-  process.exit(0);
+      process.exit(0);
       }
     );
   }
@@ -143,7 +141,7 @@ mc.on("message", (message) => {
       } else {
         var interval = config.extras.hypixelLobbyWarp.interval.beforeLobby;
       }
-    setTimeout(() => {
+      setTimeout(() => {
         log("Sending to lobby, in hopes of a Mystery Box.");
         mc.chat("/lobby");
         lobbyWarping = true
@@ -179,15 +177,15 @@ mc.on("message", (message) => {
       inGame = false;
       if (!lobbyWarping) {
         if (config.extras.hypixelAutoMatch.enabled) {
-        log("Detected to be in lobby, sending to game.");
-        mc.chat("/play arcade_party_games_1");
-      } else {
-        log("Detected to be in lobby, sending to limbo.");
-        mc.chat("/achat \u00a7c<3");
+          log("Detected to be in lobby, sending to game.");
+          mc.chat("/play arcade_party_games_1");
+        } else {
+          log("Detected to be in lobby, sending to limbo.");
+          mc.chat("/achat \u00a7c<3");
+        }
       }
     }
   }
-}
 });
 
 discord.login(config.discord.botToken);
