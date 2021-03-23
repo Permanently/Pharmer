@@ -16,15 +16,7 @@ const mc = Mineflayer.createBot({
 });
 mc.settings.viewDistance = "tiny";
 
-function log(message, discord) {
-  if (discord) {
-    channel.send("`" + message + "`");
-    console.log("Minecraft: " + message);
-  } else {
-    channel.send(message);
-    console.log(message);
-  }
-}
+var channel;
 
 limboCmd = false;
 lobbyWarping = false;
@@ -39,6 +31,16 @@ discord.on("ready", () => {
     process.exit(1);
   }
 });
+
+function log(message, discord) {
+  if (discord) {
+    channel.send("`" + message + "`");
+    console.log("Minecraft: " + message);
+  } else {
+    channel.send(message);
+    console.log(message);
+  }
+}
 
 discord.on("message", (message) => {
   if (message.channel.id !== channel.id) return;
