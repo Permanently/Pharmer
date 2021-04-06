@@ -89,3 +89,4 @@ typings/
 
 # Sensitive data is stored in this file (obviously)
 config/
+launcher_profiles.json
