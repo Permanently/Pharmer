@@ -8,8 +8,9 @@ is built around Party Games on an unmentioned Minecraft server, in order to farm
 Guild EXP. Customisability may be extended in the near future.
 
 **Fun fact:** I named this Pharmer because I had this clever idea of combining
-two things into a word, but I completely forgot what I was thinking - so now
-this is called Pharmer, and I'm not too sure why anymore.
+two things into a word, ~~but I completely forgot what I was thinking - so now
+this is called Pharmer, and I'm not too sure why anymore.~~ I think I was trying
+to put "Phat" and "Farmer" together, since you get fat amounts of GEXP and stuff.
 
 ## Requirements
 
