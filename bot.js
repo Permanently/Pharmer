@@ -98,9 +98,8 @@ mc.on("error", (err) => {
   process.exit(1);
 });
 
-mc.on("message", (message) => {
-  message = message.toString();
-  silence = false;
+mc.on("messagestr", (message) => {
+  var silence = false;
 
   silencedMsgs.forEach((entry) => {
     if (message.includes(entry)) silence = true;
