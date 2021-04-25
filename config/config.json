@@ -27,6 +27,9 @@
         "beforeLobby": 5000,
         "beforeGame": 5000
       }
+        },
+        "walkBackwards": {
+            "enabled": true
     }
   }
 }

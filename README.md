@@ -60,6 +60,7 @@ to put "Phat" and "Farmer" together, since you get fat amounts of GEXP and stuff
 | `extras.hypixelLobbyWarp.enabled` | Whether you want the bot to warp to lobby before re-joining a game. Useful if you want to also farm for Mystery Boxes. | boolean |
 | `extras.hypixelLobbyWarp.interval.beforeLobby` | The amount of milliseconds you want to wait after the end of a game. | integer |
 | `extras.hypixelLobbyWarp.interval.beforeGame` | The amount of milliseconds you want to wait before re-joining a game. | integer |
+| `extras.walkBackwards.enabled` | Whether you want the bot to walk backwards in order to minimise "cheating" suspicions.  | boolean |
 
 ### silenced-msgs.json
 

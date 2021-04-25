@@ -62,6 +62,9 @@ discord.on("message", (message) => {
 
 mc.on("login", () => {
   log("Logged into Minecraft.");
+  if (config.extras.walkBackwards) {
+    mc.setControlState("back", true);
+  }
   inGame = false;
 });
 
