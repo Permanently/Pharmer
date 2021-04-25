@@ -1,11 +1,13 @@
 const Mineflayer = require("mineflayer");
 const DiscordJS = require("discord.js-light");
 const config = require("./config/config.json");
+const ignoredEvents = require("./djs.ignoredEvents.js");
 const silencedMsgs = require("./config/silenced-msgs.json")[
   "silenced-messages"
 ];
 const discord = new DiscordJS.Client({
-  cacheChannels: true
+  cacheChannels: true,
+  disabledEvents: ignoredEvents
 });
 const mc = Mineflayer.createBot({
   host: config.minecraft.server.address,
